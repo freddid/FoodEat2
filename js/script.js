@@ -8,7 +8,6 @@ $(() => {
           <a-nft
           smooth="true"
           type="nft"
-          data-mark=${el.restaurant_id[0]}
           url="./output/${el.marker}"
           emitevents="true"
         ></a-nft>
