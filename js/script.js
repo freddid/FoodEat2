@@ -1,15 +1,15 @@
 $(() => {
-   fetch('https://foodeat2.onrender.com/api/markers')
-  .then((response) => response.json())
-  .then((data) => {
-   console.log(data)
-   data.forEach(el => {
+//    fetch('https://foodeat2.onrender.com/api/markers')
+//   .then((response) => response.json())
+//   .then((data) => {
+//    console.log(data)
+   [{marker:'kfc', restaurant_id:'3'},{marker:'mac', restaurant_id:'12'}].forEach(el => {
       $(".scene")[0].innerHTML += `
           <a-nft
           smooth="true"
           type="nft"
           data-mark=${el.restaurant_id[0]}
-          url="https://foodeat2.onrender.com${el.marker}"
+          url="./output/${el.marker}"
           emitevents="true"
         ></a-nft>
           `;
@@ -18,5 +18,5 @@ $(() => {
     $("a-nft").on("markerFound", (event) => {
       alert('fred')
    })
-});
+// });
 });
