@@ -1,5 +1,5 @@
 $(() => {
-   fetch('http://185.211.170.2:5000/api/markers')
+   fetch('https://foodeat2.onrender.com/api/markers')
   .then((response) => response.json())
   .then((data) => {
    console.log(data)
