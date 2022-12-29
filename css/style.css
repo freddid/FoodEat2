@@ -1,0 +1,388 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+
+body {
+  background-color: #000;
+}
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.book-card {
+  position: absolute;
+  bottom: -50vh;
+  left: 0;
+  z-index: 100;
+  transition: all 0.3s;
+  width: 100%;
+}
+
+.book-card .wrapper {
+  width: calc(100% - 30px);
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  z-index: 1000;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: rgba(255, 255, 255, 0.479);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.book-card.active {
+  bottom: 0;
+}
+
+.btns {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(189, 189, 189);
+}
+.btn {
+  text-align: center;
+  padding: 10px 0;
+  user-select: none;
+  font-size: 14px;
+  font-weight: 500;
+  flex-grow: 1;
+  border-left: 1px solid rgb(189, 189, 189);
+}
+.btn:first-child {
+  border-left: none;
+}
+.btn.close {
+  flex-grow: 0.5;
+  background-color: rgba(255, 2, 2, 0.466);
+  min-width: 40px;
+}
+
+.btn.active {
+  background: #fff;
+}
+
+.descriptions {
+  overflow: auto;
+}
+
+.description {
+  display: none;
+  padding: 10px;
+}
+
+.description.active {
+  display: block;
+}
+
+.book-card__container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.book-card__img {
+  width: 50%;
+  justify-content: center;
+  display: flex;
+  max-height: 80%;
+}
+
+.book-card__img img {
+  border-radius: 10px;
+  max-height: 100%;
+}
+
+.book-card__info {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 50%;
+}
+
+.book-card__description {
+  text-align: justify;
+  line-height: 18px;
+  text-indent: 1.5em;
+  margin-top: 20px;
+}
+
+.book-card__name {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+.book-card__rate,
+.book-card__author {
+  font-size: 14px;
+}
+
+.book-card__price {
+  font-weight: 500;
+}
+
+.book-card__comment-user {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+.book-card__comment-user img {
+  width: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.book-card__comment-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.book-card__comment-descriptions {
+  text-align: justify;
+  line-height: 18px;
+  text-indent: 1.5em;
+}
+
+.book-card__comment {
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.664);
+  padding: 10px;
+}
+
+.book-card__characteristics {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.664);
+  padding: 10px;
+}
+
+.book-card__characteristic {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.book-card__characteristic-name {
+  font-weight: 600;
+}
+.book-card__characteristic-value {
+  max-width: 60%;
+  text-align: right;
+}
+
+.act-1 .description-1,
+.act-1 .btn-1,
+.act-2 .description-2,
+.act-2 .btn-2,
+.act-3 .description-3,
+.act-3 .btn-3 {
+  display: block;
+}
+
+.act-1 .btn-1,
+.act-2 .btn-2,
+.act-3 .btn-3 {
+  background-color: #fff;
+}
+
+.menu__burger {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 50px;
+  z-index: 5;
+  font-size: 30px;
+  font-weight: 600;
+  height: 50px;
+  display: flex;
+  transition: all 0.3s;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu__aside {
+  position: absolute;
+  width: 100%;
+  transition: all 0.3s;
+  padding: 10px;
+  z-index: 4;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.664);
+  left: -100%;
+  top: 0;
+}
+.active .menu__burger {
+  transform: rotate(90deg);
+}
+
+.active .menu__aside {
+  left: 0;
+}
+
+.login {
+  background-color: rgba(255, 255, 255, 0.664);
+  border-radius: 10px;
+  padding: 10px;
+  max-width: 330px;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 70px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login h2 {
+  margin-bottom: 30px;
+}
+
+.login input {
+  border: 1px solid #fff;
+  outline: none;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.login button {
+  width: 100%;
+  border: 1px solid #000;
+  background: rgb(255, 255, 255);
+  padding: 10px;
+  text-align: center;
+}
+
+.user {
+  max-width: 320px;
+  z-index: 10;
+  margin: 0 auto;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.active-user .user {
+  display: flex;
+}
+.active-user .login {
+  display: none;
+}
+
+.user__header {
+  background-color: rgba(255, 255, 255, 0.664);
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+  width: 100%;
+}
+
+.user__info {
+  display: flex;
+  align-items: center;
+}
+.user__img {
+  width: 60px;
+  margin-right: 10px;
+}
+
+.user__logout {
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+}
+
+.user__books {
+  background-color: rgba(255, 255, 255, 0.664);
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  justify-content: space-between;
+  width: 100%;
+}
+.user__book img {
+  height: 100px;
+}
+.user__book {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 1px solid #000;
+  padding: 10px 0px;
+}
+
+.user__book:last-child {
+  border: none;
+}
+.user__book-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+.user .book_name {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.book-card__mark {
+  display: none;
+  color: blue;
+}
+
+.user-active .book-card__mark {
+  display: block;
+}
+
+.user__book-del {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgba(255, 2, 2, 0.466);
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+
+.add-commit {
+  position: absolute;
+  top: 42px;
+  display: none;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.user-active .add-commit {
+  display: flex;
+}
+
+.user-active .comms-block {
+  margin-top: 60px;
+}
+
+.add-commit input {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+.add-commit button {
+  padding: 10px;
+  height: 100%;
+  outline: none;
+  background-color: #000;
+  color: #fff;
+}
